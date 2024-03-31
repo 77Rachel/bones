@@ -7,7 +7,7 @@
   <div class="upload">
     <el-upload
     class="upload-windows"
-    action="./upload"
+    action="https://bones.hctest.fun/upload"
     :before-upload="uploadPreview"
     drag
     multiple
@@ -45,19 +45,19 @@
   // 检测格式和大小
   const uploadPreview = (file) => {
     const isCsv = /\.txt$/.test(file.name.substring(file.name.lastIndexOf('.')));
-    const isLess100 = file.size / 1024 < 100;
+    const isLess1 = file.size / 1024 / 1024 < 1;
 
     if (!isCsv) {
         this.$message.error("上传图片只能是 txt 格式!");
         return false;
       };
 
-   if (!isLess100) {
-        this.$message.error("上传文件大小不能超过100KB!");
+    if (!isLess1) {
+        this.$message.error("上传文件大小不能超过1MB!");
         return false;
       };
 
-   return isCsv && isLess100;
+   return isCsv && isLess1;
   }
 </script>
 
