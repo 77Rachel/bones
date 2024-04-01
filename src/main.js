@@ -12,4 +12,4 @@ import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import zhCn from "element-plus/dist/locale/zh-cn.mjs"
 
 const app = createApp(App);
-app.use(ElementPlus, { locale: zhCn }).use(router).use(pinia).mount('#app')
+app.use(ElementPlus).use(router).use(pinia).mount('#app')
