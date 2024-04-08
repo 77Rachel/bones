@@ -1,4 +1,5 @@
 import { createRouter, createWebHashHistory } from "vue-router";
+import useFileStore from "@/stores/modules/file";
 
 const router = createRouter({
   history: createWebHashHistory(),
@@ -13,14 +14,14 @@ const router = createRouter({
       component: () => import("@/views/home/home.vue")
     },
     {
-      path: "/upload",
-      component: () => import("@/views/upload/upload.vue")
+      path: "/download",
+      component: () => import("@/views/download/download.vue"),
     },
     {
       path: "/result",
       component: () => import("@/views/result/result.vue")
     }
   ]
-})
+});
 
 export default router
