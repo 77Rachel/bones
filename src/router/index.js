@@ -16,10 +16,6 @@ const router = createRouter({
     {
       path: "/download",
       component: () => import("@/views/download/download.vue"),
-    },
-    {
-      path: "/result",
-      component: () => import("@/views/result/result.vue")
     }
   ]
 });

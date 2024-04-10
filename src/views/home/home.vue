@@ -66,7 +66,7 @@ const formData = new FormData();
 
 // 实现文件上传
 const postFile = (fileInput) => {
-  const fileSize = fileInput.file.size / 1024 < 100;
+  const fileSize = fileInput.file.size / 1024 < 5000;
   const fileName = fileInput.file.name
   const fileType = fileName.substring(fileInput.file.name.lastIndexOf(".") + 1);
   const isCsv = fileType === "csv";

@@ -11,7 +11,6 @@
 import useFileStore from "@/stores/modules/file";
 import { ref } from "vue";
 
-
 const fileStore = useFileStore();
 const uploadFile = ref('');
 uploadFile.value = fileStore.uploadFile;
