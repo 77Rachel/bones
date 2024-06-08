@@ -7,8 +7,11 @@ export default defineConfig({
   plugins: [
     vue()
   ],
+  // 配置解析别名
   resolve: {
+    extensions:['.js','.json','.vue'],
     alias: {
+      // 'vue': 'vue/dist/vue.js',
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   }

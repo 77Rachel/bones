@@ -78,11 +78,16 @@ const downloadFile = async () => {
 
 </script>
 
-<style scoped>
-.font{
-  font-weight: 700;
-  font-size: 25px;
-  padding-bottom: 8px;
+<style lang="scss" scoped>
+.download {
+  position: relative;
+  top: 350px;
+
+  .font{
+    font-weight: 700;
+    font-size: 25px;
+    padding-bottom: 8px;
+  }
 }
 
 :deep(.el-button) {

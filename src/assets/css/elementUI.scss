@@ -1,0 +1,15 @@
+.el-sub-menu .el-menu-item {
+  font-size: 14px;
+  padding-left: 50px !important;
+  &.is-active { background-color: rgba(245,108,108,0.2) !important; }
+}
+
+li.el-sub-menu {
+  &.is-active.is-opened .el-sub-menu__title {
+    background-color: $mainColor !important;
+  }
+}
+
+.el-menu-item.is-active {
+  color: rgb(206, 203, 200);
+}
